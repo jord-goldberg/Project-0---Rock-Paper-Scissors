@@ -1,0 +1,12 @@
+2016/06/24, 11:35:06 Player chose ROCK, Killbot chose ROCK
+2016/06/24, 11:35:09 Player chose PAPER, Killbot chose PAPER
+2016/06/24, 11:35:13 Player chose SCISSORS, Killbot chose PAPER
+2016/06/24, 11:52:07 Player chose ROCK, Killbot chose ROCK
+2016/06/24, 11:52:11 Player chose PAPER, Killbot chose SCISSORS
+2016/06/24, 11:59:39 Player chose SCISSORS, Killbot chose SCISSORS
+2016/06/24, 11:59:43 Player chose SCISSORS, Killbot chose ROCK
+2016/06/24, 13:22:26 Player chose SCISSORS, Killbot chose PAPER
+2016/06/24, 15:00:16 Player chose ROCK, Killbot chose SCISSORS
+2016/06/24, 15:38:22 Player chose ROCK, Killbot chose SCISSORS
+2016/06/24, 15:38:35 Player chose PAPER, Killbot chose PAPER
+2016/06/24, 15:39:02 Player chose SCISSORS, Killbot chose ROCK
