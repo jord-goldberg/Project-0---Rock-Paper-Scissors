@@ -10,3 +10,5 @@
 2016/06/24, 15:38:22 Player chose ROCK, Killbot chose SCISSORS
 2016/06/24, 15:38:35 Player chose PAPER, Killbot chose PAPER
 2016/06/24, 15:39:02 Player chose SCISSORS, Killbot chose ROCK
+2016/06/24, 16:02:21 WIN. Jordan chose ROCK, Killbot chose SCISSORS
+2016/06/24, 16:04:22 LOSS. Jordan chose SCISSORS, Killbot chose ROCK

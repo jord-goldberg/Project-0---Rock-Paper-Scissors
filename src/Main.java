@@ -12,6 +12,8 @@ public class Main {
     static List<Integer> totallosses = new ArrayList<>();
     static List<Integer> totalties = new ArrayList<>();
 
+    static String player1 = "";
+
     public static void main(String[] args) {
 
         intro();
@@ -22,7 +24,23 @@ public class Main {
     public static void intro(){
 
         System.out.println("");
-        System.out.println("\"Welcome to the Rock, Paper, Scissors Game! I'll be your Killbo- er... Computer interpreter.\"");
+        System.out.println("-- Welcome to the Rock, Paper, Scissors Game. Good luck; you'll need it! --");
+
+        onePlayer();
+    }
+
+    // One player thread
+    public static void onePlayer(){
+
+        System.out.println("-- Please enter your name --");
+        System.out.println("");
+
+        Scanner playerName = new Scanner(System.in);
+        String name = playerName.nextLine();
+        player1 = name;
+
+        System.out.println("");
+        System.out.println("-- Welcome, " + player1 + " --");
         System.out.println("");
         System.out.println("-- To start a new game, type PLAY --");
         System.out.println("-- To see the history, type HISTORY --");
@@ -43,8 +61,6 @@ public class Main {
             case "play":
                 System.out.println("");
                 System.out.println("** BOOTING UP KILLBOT. PREPARE TO BE KILLBOTTED, MORTAL **");
-                System.out.println("");
-                System.out.println("\"Haha, oh that silly computer. Don't worry player, you're probably safe.\"");
                 game();
                 break;
             case "history":
@@ -93,45 +109,45 @@ public class Main {
                 if ((killBotChoice >= 0) && (killBotChoice < 333)) {
                     System.out.println("** ROCK **");
                     runTie();
-                    saveHistory(currentTime() + " TIE. Player chose ROCK, Killbot chose ROCK");
+                    saveHistory(currentTime() + " TIE. " + player1 + " chose ROCK, Killbot chose ROCK");
                 } else if ((killBotChoice > 332) && (killBotChoice < 666)) {
                     System.out.println("** PAPER **");
                     runLoss();
-                    saveHistory(currentTime() + " LOSS. Player chose ROCK, Killbot chose PAPER");
+                    saveHistory(currentTime() + " LOSS. " + player1 + " chose ROCK, Killbot chose PAPER");
                 } else {
                     System.out.println("** SCISSORS **");
                     runWin();
-                    saveHistory(currentTime() + " WIN. Player chose ROCK, Killbot chose SCISSORS");
+                    saveHistory(currentTime() + " WIN. " + player1 + " chose ROCK, Killbot chose SCISSORS");
                 }
                 break;
             case "paper":
                 if ((killBotChoice >= 0) && (killBotChoice < 333)) {
                     System.out.println("** ROCK **");
                     runWin();
-                    saveHistory(currentTime() + " WIN. Player chose PAPER, Killbot chose ROCK");
+                    saveHistory(currentTime() + " WIN. " + player1 + " chose PAPER, Killbot chose ROCK");
                 } else if ((killBotChoice > 332) && (killBotChoice < 666)) {
                     System.out.println("** PAPER **");
                     runTie();
-                    saveHistory(currentTime() + " TIE. Player chose PAPER, Killbot chose PAPER");
+                    saveHistory(currentTime() + " TIE. " + player1 + " chose PAPER, Killbot chose PAPER");
                 } else {
                     System.out.println("** SCISSORS **");
                     runLoss();
-                    saveHistory(currentTime() + " LOSS. Player chose PAPER, Killbot chose SCISSORS");
+                    saveHistory(currentTime() + " LOSS. " + player1 + " chose PAPER, Killbot chose SCISSORS");
                 }
                 break;
             case "scissors":
                 if ((killBotChoice >= 0) && (killBotChoice < 333)) {
                     System.out.println("** ROCK **");
                     runLoss();
-                    saveHistory(currentTime() + " LOSS. Player chose SCISSORS, Killbot chose ROCK");
+                    saveHistory(currentTime() + " LOSS. " + player1 + " chose SCISSORS, Killbot chose ROCK");
                 } else if ((killBotChoice > 332) && (killBotChoice < 666)) {
                     System.out.println("** PAPER **");
                     runWin();
-                    saveHistory(currentTime() + " WIN. Player chose SCISSORS, Killbot chose PAPER");
+                    saveHistory(currentTime() + " WIN. " + player1 + " chose SCISSORS, Killbot chose PAPER");
                 } else {
                     System.out.println("** SCISSORS **");
                     runTie();
-                    saveHistory(currentTime() + " TIE. Player chose SCISSORS, Killbot chose SCISSORS");
+                    saveHistory(currentTime() + " TIE. " + player1 + " chose SCISSORS, Killbot chose SCISSORS");
                 }
                 break;
             default:
@@ -144,7 +160,7 @@ public class Main {
 // Player Wins
     public static void runWin(){
 
-        System.out.println("-- Player Wins --");
+        System.out.println("-- " + player1 + " Wins --");
         System.out.println("");
         System.out.println("** LUCKILY, I CAN DELETE LOSSES FROM MY MEMORY **");
         totalwins.add(1);
@@ -153,7 +169,7 @@ public class Main {
 // Player Loses
     public static void runLoss(){
 
-        System.out.println("-- Player Loses --");
+        System.out.println("-- " + player1 + " Loses --");
         System.out.println("");
         System.out.println("** PREPARE TO CALL LOVED ONES. NONE? I'M NOT SURPRISED **");
         totallosses.add(1);
@@ -189,7 +205,7 @@ public class Main {
                 break;
             default:
                 System.out.println("");
-                System.out.println("It's just one letter, dummy, try again.");
+                System.out.println("-- It's just one letter, dummy, try again --");
                 playAgain();
         }
 
